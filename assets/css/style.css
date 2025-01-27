@@ -83,31 +83,28 @@ nav {
 }
 
 @media only screen and (max-width: 950px) {
-    .card-login {
+    .card-login, .card-register {
       width: 85%;
     }
 }
   
 @media only screen and (max-width: 600px) {
-    .main-login {
+    .main-login, .main-register {
       flex-direction: column;
     }
-    .left-login {
+    .left-login, .left-register {
       width: 100%;
       height: auto;
     }
-    .left-login > h1 {
+    .left-login > h1, .left-register > h1 {
       display: none;
     }
   
-    .right-login {
+    .right-login, .right-register {
       width: 100%;
       height: auto;
     }
-    .left-login-img {
-      width: 50vw;
-    }
-    .card-login {
+    .card-login, .card-register {
       width: 90%;
     }
 }
