@@ -1,4 +1,4 @@
-<?php 
+<div?php 
 session_start();
 if (!isset($_SESSION['user_id'])) {
     header('Location: index.php');
@@ -41,11 +41,31 @@ if (!isset($_SESSION['user_id'])) {
                     <a class="nav-link" href="#">Kontak</a>
                 </li>
             </ul>
+            <a class="btn btn-sm me-2 fw-bold px-3" href="logout.php" style="background: #00AA55; border-radius: 50px">Keluar</a>
         </div>
     </div>
     </nav>
 
     <!-- Jumbotron -->
+    <section id="header">
+        <div class="container mt-4">
+            <div class="row header-section align-items-center">
+                <div class="col-md-6 px-5">
+                    <h1 class="mb-5">Temukan tempat ternyaman untuk tinggal</h1>
+                    <p>Temukan kos terbaik dengan fasilitas lengkap dan lokasi strategis, sesuai kebutuhan kamu!</p>
+                </div>
+
+                <div class="col-md-6">
+                    <img src="assets/img/header.jpg" class="header-img" alt="Header Image">
+                </div>
+            </div>
+            <div class="search-box mt-4">
+                <input type="text" placeholder="Lokasi">
+                <button class="search-btn">Cari</button>
+            </div>
+        </div>
+    </section>
+
     <section class="jumbotron text-center py-5">
         <div class="container">
             <h1 class="display-4 fw-bold text-light">Selamat Datang di <span style="color:#00FF88">eKos</span></h1>
