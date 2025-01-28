@@ -46,7 +46,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         <div class="right-login d-flex justify-content-center align-items-center">
             <div class="card-login d-flex justify-content-center align-items-center flex-column rounded">
-                <h1>Login</h1>
+                <h1>Masuk</h1>
                 <?php if ($error): ?>
                     <div class="alert alert-danger w-100 text-center">
                         <?= htmlspecialchars($error) ?>
@@ -61,9 +61,9 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <label for="password">Password</label>
                         <input class="text border-0 rounded p-2 w-100" name="password" placeholder="Password" id="password" type="password" required>
                     </div>
-                    <button class="btn-login border-0 rounded fw-bold w-100" type="submit">Login</button>
+                    <button class="btn-login border-0 rounded fw-bold w-100" type="submit">Masuk</button>
                 </form>
-                <p class="mt-3 text-light">Belum punya akun? <a href="register.php" class="text-success text-decoration-none">Register</a></p>
+                <p class="mt-3 text-light">Belum punya akun? <a href="register.php" class="text-success text-decoration-none">Daftar</a></p>
             </div>
         </div>
     </main>
