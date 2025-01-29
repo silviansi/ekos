@@ -21,7 +21,7 @@ if (!isset($_SESSION['user_id'])) {
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container-fluid">
-        <a class="navbar-brand fw-bold" style="color: #00FF88" href="#">eKos</a>
+        <a class="navbar-brand fw-bold mx-3" style="color: #00FF88" href="#">eKos</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -46,7 +46,7 @@ if (!isset($_SESSION['user_id'])) {
     </div>
     </nav>
 
-    <!-- Jumbotron -->
+    <!-- Header -->
     <section id="header">
         <div class="container mt-4">
             <div class="row header-section align-items-center">
@@ -66,13 +66,49 @@ if (!isset($_SESSION['user_id'])) {
         </div>
     </section>
 
-    <section class="jumbotron text-center py-5">
-        <div class="container">
-            <h1 class="display-4 fw-bold text-light">Selamat Datang di <span style="color:#00FF88">eKos</span></h1>
-            <p class="lead text-light">
-                Temukan kos impianmu dengan mudah dan cepat hanya di eKos. Pilih berdasarkan lokasi, harga, dan fasilitas yang sesuai!
-            </p>
-            <a href="#" class="btn btn-md btn-search fw-bold">Cari Kos Sekarang</a>
+    <!-- Kos populer -->
+    <section id="kos-populer">
+        <div class="container mt-3">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <h2 class="text-light">Kos Populer</h2>
+                    <p class="text-light mb-0">Kami punya banyak pilihan kos yang cocok untukmu!</p>
+                </div>
+                <a href="#" class="btn btn-view text-success">Lihat Semua</a>
+            </div>
+            <div class="row mt-4">
+            <!-- Kos Card -->
+            <div class="col-md-4 mt-3">
+                <div class="card h-100 shadow-sm">
+                    <img src="assets/img/kos-a.jpg" class="card-img-top" alt="Kos A">
+                    <div class="card-body">
+                        <h5 class="card-title">Kos Ketintang Wiyata</h5>
+                        <p class="card-text">Harga: Rp1.500.000/bulan</p>
+                        <a href="#" class="btn btn-primary" style="background-color: #00FF88;">Lihat Detail</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mt-3">
+                <div class="card h-100 shadow-sm">
+                    <img src="assets/img/kos-b.jpeg" class="card-img-top" alt="Kos B">
+                    <div class="card-body">
+                        <h5 class="card-title">Kos Wonokromo</h5>
+                        <p class="card-text">Harga: Rp1.200.000/bulan</p>
+                        <a href="#" class="btn btn-primary" style="background-color: #00FF88;">Lihat Detail</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mt-3">
+                <div class="card h-100 shadow-sm">
+                    <img src="assets/img/kos-c.jpg" class="card-img-top" alt="Kos C">
+                    <div class="card-body">
+                        <h5 class="card-title">Kos Lidah Wetan</h5>
+                        <p class="card-text">Harga: Rp1.000.000/bulan</p>
+                        <a href="#" class="btn btn-primary" style="background-color: #00FF88;">Lihat Detail</a>
+                    </div>
+                </div>
+            </div>
+            </div>
         </div>
     </section>
 
@@ -91,45 +127,6 @@ if (!isset($_SESSION['user_id'])) {
             <div class="col-md-4">
                 <h4>Ulasan Penghuni</h4>
                 <p>Baca ulasan penghuni sebelumnya untuk pilihan yang lebih tepat.</p>
-            </div>
-        </div>
-    </div>
-    </section>
-
-    <section class="py-5 bg-light">
-    <div class="container">
-        <h2 class="text-center">Kos Populer</h2>
-        <div class="row mt-4">
-            <!-- Kos Card -->
-            <div class="col-md-4">
-                <div class="card shadow-sm">
-                    <img src="assets/images/kos1.jpg" class="card-img-top" alt="Kos A">
-                    <div class="card-body">
-                        <h5 class="card-title">Kos A</h5>
-                        <p class="card-text">Harga: Rp1.500.000/bulan</p>
-                        <a href="#" class="btn btn-primary" style="background-color: #00FF88;">Lihat Detail</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card shadow-sm">
-                    <img src="assets/images/kos2.jpg" class="card-img-top" alt="Kos B">
-                    <div class="card-body">
-                        <h5 class="card-title">Kos B</h5>
-                        <p class="card-text">Harga: Rp1.200.000/bulan</p>
-                        <a href="#" class="btn btn-primary" style="background-color: #00FF88;">Lihat Detail</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card shadow-sm">
-                    <img src="assets/images/kos3.jpg" class="card-img-top" alt="Kos C">
-                    <div class="card-body">
-                        <h5 class="card-title">Kos C</h5>
-                        <p class="card-text">Harga: Rp1.000.000/bulan</p>
-                        <a href="#" class="btn btn-primary" style="background-color: #00FF88;">Lihat Detail</a>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
