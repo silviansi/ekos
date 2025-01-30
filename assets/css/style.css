@@ -147,20 +147,6 @@ nav {
     border: none;
 }
 
-.btn-view {
-    background-color: rgba(36, 171, 112, 0.2);
-    border-radius: 50px;
-    font-size: 14px;
-}
-
-.btn-view:hover {
-    background-color: rgba(36, 171, 112, 0.4);
-    color: #FFFFFF;
-}
-
-.jumbotron {
-    background: #2B134B;
-}
 
 .btn-search {
     background: #00FF88;

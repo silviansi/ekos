@@ -16,6 +16,8 @@ if (!isset($_SESSION['user_id'])) {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 </head>
 <body>
     <!-- Navbar -->
@@ -41,7 +43,7 @@ if (!isset($_SESSION['user_id'])) {
                     <a class="nav-link" href="#">Kontak</a>
                 </li>
             </ul>
-            <a class="btn btn-sm me-2 fw-bold px-3" href="logout.php" style="background: #00AA55; border-radius: 50px">Keluar</a>
+            <a class="btn btn-sm btn-success me-2 fw-bold px-3 rounded-pill mt-2" href="logout.php">Keluar</a>
         </div>
     </div>
     </nav>
@@ -67,14 +69,14 @@ if (!isset($_SESSION['user_id'])) {
     </section>
 
     <!-- Kos populer -->
-    <section id="kos-populer">
+    <section id="kos-populer" class="py-5">
         <div class="container mt-3">
             <div class="d-flex justify-content-between align-items-center">
                 <div>
                     <h2 class="text-light">Kos Populer</h2>
                     <p class="text-light mb-0">Kami punya banyak pilihan kos yang cocok untukmu!</p>
                 </div>
-                <a href="#" class="btn btn-view text-success">Lihat Semua</a>
+                <a href="#" class="btn btn-md btn-success rounded-pill">Lihat Semua</a>
             </div>
             <div class="row mt-4">
             <!-- Kos Card -->
@@ -84,7 +86,16 @@ if (!isset($_SESSION['user_id'])) {
                     <div class="card-body">
                         <h5 class="card-title">Kos Ketintang Wiyata</h5>
                         <p class="card-text">Harga: Rp1.500.000/bulan</p>
-                        <a href="#" class="btn btn-primary" style="background-color: #00FF88;">Lihat Detail</a>
+                        <div class="mt-auto d-flex justify-content-between align-items-center">
+                        <div class="rating text-warning">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <a href="#" class="btn btn-success">Lihat Detail</a>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -94,7 +105,16 @@ if (!isset($_SESSION['user_id'])) {
                     <div class="card-body">
                         <h5 class="card-title">Kos Wonokromo</h5>
                         <p class="card-text">Harga: Rp1.200.000/bulan</p>
-                        <a href="#" class="btn btn-primary" style="background-color: #00FF88;">Lihat Detail</a>
+                        <div class="mt-auto d-flex justify-content-between align-items-center">
+                        <div class="rating text-warning">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                        </div>
+                        <a href="#" class="btn btn-success">Lihat Detail</a>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -104,7 +124,16 @@ if (!isset($_SESSION['user_id'])) {
                     <div class="card-body">
                         <h5 class="card-title">Kos Lidah Wetan</h5>
                         <p class="card-text">Harga: Rp1.000.000/bulan</p>
-                        <a href="#" class="btn btn-primary" style="background-color: #00FF88;">Lihat Detail</a>
+                        <div class="mt-auto d-flex justify-content-between align-items-center">
+                        <div class="rating text-warning">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                            <i class="bi bi-star"></i>
+                        </div>
+                        <a href="#" class="btn btn-success">Lihat Detail</a>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -112,21 +141,68 @@ if (!isset($_SESSION['user_id'])) {
         </div>
     </section>
 
-    <section class="py-5">
-    <div class="container text-center">
-        <h2>Fitur Unggulan</h2>
-        <div class="row mt-4">
+    <!-- Fasilitas -->
+    <section id="fasilitas" class="py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Bagian Kiri (Deskripsi) -->
             <div class="col-md-4">
-                <h4>Lokasi Strategis</h4>
-                <p>Temukan kos di lokasi terbaik sesuai kebutuhan Anda.</p>
+                <p class="text-light">Temukan berbagai fasilitas terbaik yang akan membuat pengalaman tinggalmu lebih nyaman dan menyenangkan. Dari koneksi Wi-Fi cepat hingga ruang kerja pribadi, semua tersedia untuk memenuhi kebutuhanmu!</p>
+                <a href="#" class="btn btn-success">Kontak Sekarang</a>
             </div>
-            <div class="col-md-4">
-                <h4>Bandingkan Harga</h4>
-                <p>Bandingkan berbagai pilihan kos dengan harga terbaik.</p>
-            </div>
-            <div class="col-md-4">
-                <h4>Ulasan Penghuni</h4>
-                <p>Baca ulasan penghuni sebelumnya untuk pilihan yang lebih tepat.</p>
+
+            <!-- Bagian Kanan (Fasilitas) -->
+            <div class="col-md-8">
+                <div class="row g-3">
+                    <div class="col-6 col-md-3">
+                        <div class="card h-100 p-3 text-center">
+                            <i class="bi bi-wifi fs-1 text-success"></i>
+                            <p class="mt-2">WiFi Gratis</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="card h-100 p-3 text-center">
+                            <i class="bi bi-car-front fs-1 text-success"></i>
+                            <p class="mt-2">Area Parkir</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="card h-100 p-3 text-center">
+                            <i class="bi bi-cup-hot fs-1 text-success"></i>
+                            <p class="mt-2">Dapur Bersama</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="card h-100 p-3 text-center">
+                            <i class="bi-droplet fs-1 text-success"></i>
+                            <p class="mt-2">Kamar Mandi Dalam/Luar</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="card h-100 p-3 text-center">
+                            <i class="bi bi-lightning fs-1 text-success"></i>
+                            <p class="mt-2">Listrik Gratis</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="card h-100 p-3 text-center">
+                            <i class="bi bi-water fs-1 text-success"></i>
+                            <p class="mt-2">Area Cuci Baju</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="card h-100 p-3 text-center">
+                            <i class="bi bi-people fs-1 text-success"></i>
+                            <p class="mt-2">Ruang Bersama</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="card h-100 p-3 text-center">
+                            <i class="bi bi-three-dots fs-1 text-success"></i>
+                            <p class="mt-2">Layanan Lain</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
