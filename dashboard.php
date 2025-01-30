@@ -208,30 +208,22 @@ if (!isset($_SESSION['user_id'])) {
     </div>
     </section>
 
-    <section class="py-5">
-    <div class="container text-center">
-        <h2>Testimoni Pengguna</h2>
-        <div class="row mt-4">
-            <div class="col-md-4">
-                <blockquote class="blockquote">
-                    <p>"eKos mempermudah saya mencari kos di dekat kampus. Sangat membantu!"</p>
-                    <footer class="blockquote-footer">Rina, Mahasiswa</footer>
-                </blockquote>
-            </div>
-            <div class="col-md-4">
-                <blockquote class="blockquote">
-                    <p>"Pilihan kos yang beragam dan harga yang transparan. Mantap!"</p>
-                    <footer class="blockquote-footer">Andi, Pekerja</footer>
-                </blockquote>
-            </div>
-            <div class="col-md-4">
-                <blockquote class="blockquote">
-                    <p>"Saya sangat puas dengan layanan ini, mudah digunakan dan informatif."</p>
-                    <footer class="blockquote-footer">Siti, Freelancer</footer>
-                </blockquote>
+    <!-- Tentang Kami -->
+    <section id="about" class="py-5">
+        <div class="container mt-4">
+            <div class="row about-section align-items-center">
+                <div class="col-md-6">
+                    <img src="assets/img/about.jpg" class="about-img" alt="About Image">
+                </div>
+
+                <div class="col-md-6 px-5 text-light">
+                    <h1 class="mb-5">Tentang Kami</h1>
+                    <p>Kami adalah platform penyewaan kos yang memudahkan Anda menemukan hunian nyaman, aman, dan sesuai dengan kebutuhan. 
+                        Dengan berbagai pilihan kos di lokasi strategis, kami menghubungkan pemilik kos dengan calon penyewa secara cepat dan mudah. 
+                        Nikmati pencarian yang lebih efisien dan transparan hanya dalam beberapa klik!</p>
+                </div>
             </div>
         </div>
-    </div>
     </section>
 
     <section class="py-5 bg-light">

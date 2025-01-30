@@ -147,6 +147,27 @@ nav {
     border: none;
 }
 
+.about-section {
+    background-color:rgb(40, 17, 69);
+    color: white;
+    padding: 100px 20px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
 
 .btn-search {
     background: #00FF88;
