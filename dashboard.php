@@ -43,7 +43,7 @@ if (!isset($_SESSION['user_id'])) {
                     <a class="nav-link" href="#">Kontak</a>
                 </li>
             </ul>
-            <a class="btn btn-sm btn-success me-2 fw-bold px-3 rounded-pill mt-2" href="logout.php">Keluar</a>
+            <a class="btn btn-sm btn-success me-2 px-3 rounded-pill mt-2" href="logout.php">Keluar</a>
         </div>
     </div>
     </nav>
@@ -148,7 +148,7 @@ if (!isset($_SESSION['user_id'])) {
             <!-- Bagian Kiri (Deskripsi) -->
             <div class="col-md-4">
                 <p class="text-light">Temukan berbagai fasilitas terbaik yang akan membuat pengalaman tinggalmu lebih nyaman dan menyenangkan. Dari koneksi Wi-Fi cepat hingga ruang kerja pribadi, semua tersedia untuk memenuhi kebutuhanmu!</p>
-                <a href="#" class="btn btn-success">Kontak Sekarang</a>
+                <a href="#" class="btn btn-success">Cari Sekarang</a>
             </div>
 
             <!-- Bagian Kanan (Fasilitas) -->
@@ -226,31 +226,27 @@ if (!isset($_SESSION['user_id'])) {
         </div>
     </section>
 
-    <section class="py-5 bg-light">
-    <div class="container text-center">
-        <h2>Berlangganan Informasi Kos</h2>
-        <p>Masukkan email Anda untuk mendapatkan update kos terbaru.</p>
-        <form class="row justify-content-center mt-3">
-            <div class="col-md-4">
-                <input type="email" class="form-control" placeholder="Email Anda" required>
+   <!-- Footer -->
+    <footer class="py-4 text-center text-light">
+        <div class="container">
+            <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-3 mb-3">
+                <div>
+                    <i class="bi bi-instagram fs-5 text-danger me-2"></i> ekos.surabaya
+                </div>
+                <div>
+                    <i class="bi bi-facebook fs-5 text-primary me-2"></i> EkoSurabaya
+                </div>
+                <div>
+                    <i class="bi bi-twitter fs-5 text-info me-2"></i> ekosurabaya
+                </div>
             </div>
-            <div class="col-md-2">
-                <button type="submit" class="btn btn-primary w-100" style="background-color: #00FF88;">Daftar</button>
-            </div>
-        </form>
-    </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="py-4 text-light footer">
-    <div class="container text-center">
-        <p>&copy; 2025 eKos - Platform Pencarian Kos. All Rights Reserved.</p>
-        <p>
-            <a href="#" class="text-light mx-2">Facebook</a>
-            <a href="#" class="text-light mx-2">Instagram</a>
-            <a href="#" class="text-light mx-2">Twitter</a>
-        </p>
-    </div>
+            <div class="text-light">
+                Surabaya, Jawa Timur, Indonesia | <i class="bi bi-telephone-fill me-1"></i> +62 823 4567 890
+            </div>
+
+            <p class="mt-3 text-secondary">&copy; 2025 eKos - Platform Pencarian Kos. All Rights Reserved.</p>
+        </div>
     </footer>
 
     <!-- Bootstrap JS -->
