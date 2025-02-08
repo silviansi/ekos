@@ -190,6 +190,9 @@ nav {
     .header-img {
         display: none;
     }
+    .header-section {
+        margin: 5px;
+    }
 }
   
 @media only screen and (max-width: 600px) {
@@ -203,7 +206,6 @@ nav {
     .left-login > h1, .left-register > h1 {
       display: none;
     }
-  
     .right-login, .right-register {
       width: 100%;
       height: auto;
@@ -213,5 +215,8 @@ nav {
     }
     .header-img {
         display: none;
+    }
+    .header-section {
+        margin: 5px;
     }
 }
