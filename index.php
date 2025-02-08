@@ -4,25 +4,44 @@ require 'database.php';
 
 $error = '';
 
-if($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $email = $_POST['email'];
-    $password = $_POST['password'];
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $email = trim($_POST['email']);
+    $password = trim($_POST['password']);
 
-    // Query ke database
-    $query = "SELECT * FROM users WHERE email = :email";
-    $stmt = $conn->prepare($query);
-    $stmt->bindParam(':email', $email);
-    $stmt->execute();
-    $user = $stmt->fetch(PDO::FETCH_ASSOC);
+    if (!empty($email) && !empty($password)) {
+        // Query ke database
+        $query = "SELECT * FROM users WHERE email = :email";
+        $stmt = $conn->prepare($query);
+        $stmt->bindParam(':email', $email);
+        $stmt->execute();
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-    // Verifikasi password
-    if($user && md5($password) === $user['password']) {
-        $_SESSION['user_id'] = $user['id'];
-        $_SESSION['email'] = $user['email'];
-        $_SESSION['role_id'] = $user['role_id'];
-        header('Location: dashboard.php');
+        // Verifikasi password
+        if($user && md5($password) === $user['password']) {
+            $_SESSION['user_id'] = $user['id'];
+            $_SESSION['email'] = $user['email'];
+            $_SESSION['role_id'] = $user['role_id'];
+
+            // Redirect sesuai role_id
+            switch ($user['role_id']) {
+                case 1:
+                    header('Location: pages/admin/dashboard.php');
+                    break;
+                case 2:
+                    header('Location: pages/pemilik/dashboard.php');
+                    break;
+                case 3:
+                    header('Location: pages/penyewa/dashboard.php');
+                    break;
+                default:
+                    $error = "Role tidak valid";
+            }
+            exit();
+        } else {
+            $error = 'Email atau password salah';
+        }
     } else {
-        $error = 'Email atau password salah';
+        $error = 'Harap isi semua kolom!';
     }
 }
 ?>
