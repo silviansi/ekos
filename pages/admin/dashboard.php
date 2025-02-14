@@ -4,6 +4,17 @@ if (!isset($_SESSION['user_id'])) {
     header('Location: index.php');
     exit();
 }
+
+require_once '../../database.php'; // Panggil file database.php
+
+try {
+    // Query untuk menghitung total pengguna
+    $stmt = $conn->query("SELECT COUNT(*) FROM users");
+    $total_pengguna = $stmt->fetchColumn(); // Ambil jumlah pengguna
+
+} catch (PDOException $e) {
+    die("Error: " . $e->getMessage());
+}
 ?>
 
 <!DOCTYPE html>
@@ -59,7 +70,7 @@ if (!isset($_SESSION['user_id'])) {
             <div class="list-group list-group-flush">
                 <a href="#" class="list-group-item list-group-item-action bg-dark text-white"><i class="fa-solid fa-chart-bar me-2"></i> Dashboard</a>
                 <a href="#" class="list-group-item list-group-item-action bg-dark text-white"><i class="fa-solid fa-table me-2"></i> Data Kos</a>
-                <a href="#" class="list-group-item list-group-item-action bg-dark text-white"><i class="fa-solid fa-users me-2"></i> Pengguna</a>
+                <a href="#" class="list-group-item list-group-item-action bg-dark text-white"><i class="fa-solid fa-users me-2"></i> Data Pengguna</a>
                 <a href="#" class="list-group-item list-group-item-action bg-dark text-white"><i class="fa-solid fa-cog me-2"></i> Pengaturan</a>
                 <a href="logout.php" class="list-group-item list-group-item-action bg-dark text-danger"><i class="fa-solid fa-sign-out-alt me-2"></i> Logout</a>
             </div>
@@ -80,7 +91,7 @@ if (!isset($_SESSION['user_id'])) {
                     <div class="card text-white bg-success mb-3">
                         <div class="card-body">
                             <h5 class="card-title">Total Pengguna</h5>
-                            <p class="card-text">120 Pengguna</p>
+                            <p class="card-text"><?php echo $total_pengguna; ?></p>
                         </div>
                     </div>
                 </div>
