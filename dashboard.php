@@ -1,11 +1,3 @@
-<?php 
-session_start();
-if (!isset($_SESSION['user_id'])) {
-    header('Location: index.php');
-    exit();
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,34 +14,34 @@ if (!isset($_SESSION['user_id'])) {
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand fw-bold mx-3" style="color: #00FF88" href="#">eKos</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Beranda</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Cari Kos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Tentang Kami</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Kontak</a>
-                </li>
-            </ul>
-            <a class="btn btn-sm btn-success me-2 px-3 rounded-pill mt-2" href="logout.php">Keluar</a>
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold mx-3 brand-style" href="#">eKos</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Cari Kos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Tentang Kami</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Kontak</a>
+                    </li>
+                </ul>
+                <a class="btn btn-sm btn-logout me-2 px-3 mt-2" href="logout.php" role="button">Keluar</a>
+            </div>
         </div>
-    </div>
     </nav>
 
     <!-- Header -->
-    <section id="header">
+    <header>
         <div class="container mt-4">
             <div class="row header-section align-items-center">
                 <div class="col-md-6 px-5">
@@ -61,16 +53,12 @@ if (!isset($_SESSION['user_id'])) {
                     <img src="assets/img/header.jpg" class="header-img" alt="Header Image">
                 </div>
             </div>
-            <div class="search-box mt-4">
-                <input type="text" placeholder="Lokasi">
-                <button class="search-btn">Cari</button>
-            </div>
         </div>
-    </section>
+    </header>
 
     <!-- Kos populer -->
     <section id="kos-populer" class="py-5">
-        <div class="container mt-3">
+        <div class="container mt-5">
             <div class="d-flex justify-content-between align-items-center">
                 <div>
                     <h2 class="text-light">Kos Populer</h2>
