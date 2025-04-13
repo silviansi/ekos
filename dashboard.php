@@ -59,21 +59,21 @@
     <!-- Kos populer -->
     <section id="kos-populer" class="py-5">
         <div class="container mt-5">
-            <div class="d-flex justify-content-between align-items-center">
+            <div class="d-flex justify-content-between align-items-center mb-4">
                 <div>
-                    <h2 class="text-light">Kos Populer</h2>
+                    <h2 class="text-light fw-bold">Kos Populer</h2>
                     <p class="text-light mb-0">Kami punya banyak pilihan kos yang cocok untukmu!</p>
                 </div>
-                <a href="#" class="btn btn-md btn-success rounded-pill">Lihat Semua</a>
+                <a href="#" class="btn btn-outline-light rounded-pill">Lihat Semua</a>
             </div>
-            <div class="row mt-4">
-            <!-- Kos Card -->
-            <div class="col-md-4 mt-3">
-                <div class="card h-100 shadow-sm">
+            <div class="row">
+            <!-- Kos Card Template -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow border-0">
                     <img src="assets/img/kos-a.jpg" class="card-img-top" alt="Kos A">
-                    <div class="card-body">
-                        <h5 class="card-title">Kos Ketintang Wiyata</h5>
-                        <p class="card-text">Harga: Rp1.500.000/bulan</p>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-semibold">Kos Ketintang Wiyata</h5>
+                        <p class="card-text text-muted">Harga: Rp1.500.000/bulan</p>
                         <div class="mt-auto d-flex justify-content-between align-items-center">
                         <div class="rating text-warning">
                             <i class="bi bi-star-fill"></i>
@@ -82,17 +82,17 @@
                             <i class="bi bi-star-fill"></i>
                             <i class="bi bi-star-fill"></i>
                         </div>
-                        <a href="#" class="btn btn-success">Lihat Detail</a>
+                        <a href="#" class="btn btn-sm btn-detail rounded-pill px-3">Lihat Detail</a>
                     </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 mt-3">
-                <div class="card h-100 shadow-sm">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow border-0">
                     <img src="assets/img/kos-b.jpeg" class="card-img-top" alt="Kos B">
-                    <div class="card-body">
-                        <h5 class="card-title">Kos Wonokromo</h5>
-                        <p class="card-text">Harga: Rp1.200.000/bulan</p>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-semibold">Kos Wonokromo</h5>
+                        <p class="card-text text-muted">Harga: Rp1.200.000/bulan</p>
                         <div class="mt-auto d-flex justify-content-between align-items-center">
                         <div class="rating text-warning">
                             <i class="bi bi-star-fill"></i>
@@ -101,17 +101,17 @@
                             <i class="bi bi-star-fill"></i>
                             <i class="bi bi-star-half"></i>
                         </div>
-                        <a href="#" class="btn btn-success">Lihat Detail</a>
+                        <a href="#" class="btn btn-sm btn-detail rounded-pill px-3">Lihat Detail</a>
                     </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 mt-3">
-                <div class="card h-100 shadow-sm">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow border-0">
                     <img src="assets/img/kos-c.jpg" class="card-img-top" alt="Kos C">
-                    <div class="card-body">
-                        <h5 class="card-title">Kos Lidah Wetan</h5>
-                        <p class="card-text">Harga: Rp1.000.000/bulan</p>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-semibold">Kos Lidah Wetan</h5>
+                        <p class="card-text text-muted">Harga: Rp1.000.000/bulan</p>
                         <div class="mt-auto d-flex justify-content-between align-items-center">
                         <div class="rating text-warning">
                             <i class="bi bi-star-fill"></i>
@@ -120,7 +120,7 @@
                             <i class="bi bi-star-half"></i>
                             <i class="bi bi-star"></i>
                         </div>
-                        <a href="#" class="btn btn-success">Lihat Detail</a>
+                        <a href="#" class="btn btn-sm btn-detail rounded-pill px-3">Lihat Detail</a>
                     </div>
                     </div>
                 </div>
@@ -134,60 +134,60 @@
     <div class="container">
         <div class="row align-items-center">
             <!-- Bagian Kiri (Deskripsi) -->
-            <div class="col-md-4">
-                <p class="text-light">Temukan berbagai fasilitas terbaik yang akan membuat pengalaman tinggalmu lebih nyaman dan menyenangkan. Dari koneksi Wi-Fi cepat hingga ruang kerja pribadi, semua tersedia untuk memenuhi kebutuhanmu!</p>
-                <a href="#" class="btn btn-success">Cari Sekarang</a>
+            <div class="col-md-4 mb-4 mb-md-0">
+                <p class="fasilitas-desc">Temukan berbagai fasilitas terbaik yang akan membuat pengalaman tinggalmu lebih nyaman dan menyenangkan. Dari koneksi Wi-Fi cepat hingga ruang kerja pribadi, semua tersedia untuk memenuhi kebutuhanmu!</p>
+                <a href="#" class="btn btn-cari">Cari Sekarang</a>
             </div>
 
             <!-- Bagian Kanan (Fasilitas) -->
             <div class="col-md-8">
                 <div class="row g-3">
                     <div class="col-6 col-md-3">
-                        <div class="card h-100 p-3 text-center">
-                            <i class="bi bi-wifi fs-1 text-success"></i>
-                            <p class="mt-2">WiFi Gratis</p>
+                        <div class="card fasilitas-card text-center">
+                            <i class="bi bi-wifi fs-1 fasilitas-icon"></i>
+                            <p class="mt-2 fasilitas-text">WiFi Gratis</p>
                         </div>
                     </div>
                     <div class="col-6 col-md-3">
-                        <div class="card h-100 p-3 text-center">
-                            <i class="bi bi-car-front fs-1 text-success"></i>
-                            <p class="mt-2">Area Parkir</p>
+                        <div class="card fasilitas-card text-center">
+                            <i class="bi bi-car-front fs-1 fasilitas-icon"></i>
+                            <p class="mt-2 fasilitas-text">Area Parkir</p>
                         </div>
                     </div>
                     <div class="col-6 col-md-3">
-                        <div class="card h-100 p-3 text-center">
-                            <i class="bi bi-cup-hot fs-1 text-success"></i>
-                            <p class="mt-2">Dapur Bersama</p>
+                        <div class="card fasilitas-card text-center">
+                            <i class="bi bi-cup-hot fs-1 fasilitas-icon"></i>
+                            <p class="mt-2 fasilitas-text">Dapur Bersama</p>
                         </div>
                     </div>
                     <div class="col-6 col-md-3">
-                        <div class="card h-100 p-3 text-center">
-                            <i class="bi-droplet fs-1 text-success"></i>
-                            <p class="mt-2">Kamar Mandi Dalam/Luar</p>
+                        <div class="card fasilitas-card text-center">
+                            <i class="bi-droplet fs-1 fasilitas-icon"></i>
+                            <p class="mt-2 fasilitas-text">Kamar Mandi</p>
                         </div>
                     </div>
                     <div class="col-6 col-md-3">
-                        <div class="card h-100 p-3 text-center">
-                            <i class="bi bi-lightning fs-1 text-success"></i>
-                            <p class="mt-2">Listrik Gratis</p>
+                        <div class="card fasilitas-card text-center">
+                            <i class="bi bi-lightning fs-1 fasilitas-icon"></i>
+                            <p class="mt-2 fasilitas-text">Listrik Gratis</p>
                         </div>
                     </div>
                     <div class="col-6 col-md-3">
-                        <div class="card h-100 p-3 text-center">
-                            <i class="bi bi-water fs-1 text-success"></i>
-                            <p class="mt-2">Area Cuci Baju</p>
+                        <div class="card fasilitas-card text-center">
+                            <i class="bi bi-water fs-1 fasilitas-icon"></i>
+                            <p class="mt-2 fasilitas-text">Area Cuci Baju</p>
                         </div>
                     </div>
                     <div class="col-6 col-md-3">
-                        <div class="card h-100 p-3 text-center">
-                            <i class="bi bi-people fs-1 text-success"></i>
-                            <p class="mt-2">Ruang Bersama</p>
+                        <div class="card fasilitas-card text-center">
+                            <i class="bi bi-people fs-1 fasilitas-icon"></i>
+                            <p class="mt-2 fasilitas-text">Ruang Bersama</p>
                         </div>
                     </div>
                     <div class="col-6 col-md-3">
-                        <div class="card h-100 p-3 text-center">
-                            <i class="bi bi-three-dots fs-1 text-success"></i>
-                            <p class="mt-2">Layanan Lain</p>
+                        <div class="card fasilitas-card text-center">
+                            <i class="bi bi-three-dots fs-1 fasilitas-icon"></i>
+                            <p class="mt-2 fasilitas-text">Layanan Lain</p>
                         </div>
                     </div>
                 </div>
