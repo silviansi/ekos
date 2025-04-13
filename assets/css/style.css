@@ -76,6 +76,7 @@ body {
     box-shadow: 0 10px 40px -12px #00FF8052;
 }
 
+/* Navbar */
 nav {
     color: #2B134B;
 }
@@ -108,6 +109,7 @@ nav {
     box-shadow: 0 0 0 4px rgba(0, 255, 136, 0.4);
 }
 
+/* Header Section */
 .header-section {
     background: linear-gradient(135deg, rgba(40, 17, 69, 0.8), rgba(80, 29, 128, 0.8));
     color: white;
@@ -135,6 +137,100 @@ nav {
     object-fit: cover;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
+}
+
+/* Card Section */
+.card {
+    background-color: #EEE7F9;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 1rem;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+    color: #2B134B;
+}
+
+.card-text {
+    color: #6C757D;
+}
+
+.rating i {
+    font-size: 1rem;
+    color: #FFC107;
+}
+
+.btn-detail {
+    background-color: #5CB85C;
+    color: #FFFFFF;
+    padding: 5px 10px;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-detail:hover {
+    background-color: #4CAE4C;
+    color: #FFFFFF; 
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-img-top {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    object-fit: cover;
+    height: 200px;    
+}
+
+/* Fasilitas Section */
+.fasilitas-desc {
+    color: #FFFFFF;
+    font-size: 1rem;
+}
+
+.btn-cari {
+    background: linear-gradient(135deg, #00FF88, #00CC66);
+    color: #FFFFFF;
+    padding: 8px 16px;
+    border-radius: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: none;
+}
+
+.btn-cari:hover {
+    background: linear-gradient(135deg, #00CC66, #00FF88);
+    transform: translateY(-3px);
+}
+
+.fasilitas-card {
+    background-color: #EEE7F9;
+    padding: 1rem;
+    border: none;
+    border-radius: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fasilitas-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.fasilitas-icon {
+    color: #00CC66;
+}
+
+.fasilitas-text {
+    color: #2B134B;
+    font-size: 0.9rem;
+    font-weight: 500;
 }
 
 .about-section {
