@@ -72,7 +72,7 @@ try {
                 <a href="#" class="list-group-item list-group-item-action bg-dark text-white"><i class="fa-solid fa-table me-2"></i> Data Kos</a>
                 <a href="#" class="list-group-item list-group-item-action bg-dark text-white"><i class="fa-solid fa-users me-2"></i> Data Pengguna</a>
                 <a href="#" class="list-group-item list-group-item-action bg-dark text-white"><i class="fa-solid fa-cog me-2"></i> Pengaturan</a>
-                <a href="logout.php" class="list-group-item list-group-item-action bg-dark text-danger"><i class="fa-solid fa-sign-out-alt me-2"></i> Logout</a>
+                <a href="../../logout.php" class="list-group-item list-group-item-action bg-dark text-danger"><i class="fa-solid fa-sign-out-alt me-2"></i> Logout</a>
             </div>
         </div>
         <!-- Page Content -->
