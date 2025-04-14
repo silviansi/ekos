@@ -197,18 +197,27 @@
     </section>
 
     <!-- Tentang Kami -->
-    <section id="about" class="py-5">
-        <div class="container mt-4">
-            <div class="row about-section align-items-center">
-                <div class="col-md-6">
-                    <img src="assets/img/about.jpg" class="about-img" alt="About Image">
-                </div>
+    <section id="about" class="about-section py-5">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <!-- Gambar -->
+                 <div class="col-lg-6">
+                    <div class="about-img-wrapper">
+                        <img src="assets/img/about.jpg" class="about-img" alt="About Image">
+                    </div>
+                 </div>
 
-                <div class="col-md-6 px-5 text-light">
-                    <h1 class="mb-5">Tentang Kami</h1>
-                    <p>Kami adalah platform penyewaan kos yang memudahkan Anda menemukan hunian nyaman, aman, dan sesuai dengan kebutuhan. 
-                        Dengan berbagai pilihan kos di lokasi strategis, kami menghubungkan pemilik kos dengan calon penyewa secara cepat dan mudah. 
-                        Nikmati pencarian yang lebih efisien dan transparan hanya dalam beberapa klik!</p>
+                <!-- Konten -->
+                <div class="col-lg-6 text-light">
+                    <h2 class="mb-4 fw-bold">Kenali Kami Lebih Dekat</h2>
+                    <p class="lead mb-4">Kami hadir sebagai solusi modern untuk pencarian kos yang nyaman, aman, dan strategis.
+                        Platform kami memudahkan kamu menemukan tempat tinggal ideal hanya dalam beberapa klik.
+                    </p>
+                    <ul class="list-unstyled mb-4">
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Proses cepat & transparan</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Pilihan kos beragam</li>
+                        <li><i class="bi bi-check-circle-fill text-success me-2"></i> Didukung teknologi canggih & tim terpercaya</li>
+                    </ul>
                 </div>
             </div>
         </div>
