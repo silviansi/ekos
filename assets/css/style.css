@@ -86,27 +86,16 @@ nav {
     color: #00FF88;
 }
 
-.btn-logout {
-    background:  #28A745; 
-    color: #FFFFFF;
-    padding: 8px 16px; 
-    border-radius: 25px; 
-    font-weight: bold;
-    font-size: 12px; 
-    text-transform: uppercase;
-    border: 2px solid transparent;
-    transition: all 0.3s ease-in-out; 
+.btn-outline-custom {
+    color: #00FF88;
+    border: 1px solid #00FF88;
+    background-color: transparent;
+    transition: all 0.3s ease;
 }
 
-.btn-logout:hover {
-    background: linear-gradient(135deg, #00cc66, #00FF88); 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
-    transform: translateY(-3px); 
-}
-
-.btn-logout:focus {
-    outline: none;
-    box-shadow: 0 0 0 4px rgba(0, 255, 136, 0.4);
+.btn-outline-custom:hover {
+    background-color: #00FF88;
+    color: #fff;
 }
 
 /* Header Section */
@@ -261,6 +250,8 @@ nav {
     transform: scale(1.05);
 }
 
+
+/* Footer */
 .footer {
     background: #2B134B;
 }
@@ -268,12 +259,6 @@ nav {
 @media only screen and (max-width: 950px) {
     .card-login, .card-register {
       width: 85%;
-    }
-    .header-img {
-        display: none;
-    }
-    .header-section {
-        margin: 5px;
     }
 }
   
@@ -294,12 +279,6 @@ nav {
     }
     .card-login, .card-register {
       width: 90%;
-    }
-    .header-img {
-        display: none;
-    }
-    .header-section {
-        margin: 5px;
     }
 }
 
