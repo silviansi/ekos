@@ -98,6 +98,15 @@ nav {
     color: #fff;
 }
 
+.navbar-nav .nav-item .nav-link.active {
+    color: #ffffff !important; 
+    border-radius: 30px;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: #ffffff; 
+}
+
 /* Header Section */
 .header-section {
     background: linear-gradient(135deg, rgba(40, 17, 69, 0.8), rgba(80, 29, 128, 0.8));
@@ -220,6 +229,15 @@ nav {
     color: #2B134B;
     font-size: 0.9rem;
     font-weight: 500;
+}
+
+.card i {
+    color: #4CAF50;
+    font-size: 1.5rem;
+}
+
+.row-cols-lg-3 .col {
+    margin-bottom: 20px;
 }
 
 /* About Section */
