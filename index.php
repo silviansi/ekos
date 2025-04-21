@@ -14,42 +14,7 @@
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand fw-bold mx-3 brand-style" href="#">eKos</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Beranda</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Cari Kos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Tentang Kami</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Kontak</a>
-                    </li>
-                </ul>
-                <?php if (!isset($_SESSION['user_id'])): ?>
-                    <!-- Jika user belum login -->
-                    <a class="btn btn-sm btn-outline-custom rounded-pill me-2 px-3 mt-2" href="login.php" role="button">Masuk</a>
-                    <a class="btn btn-sm btn-outline-custom rounded-pill me-2 px-3 mt-2" href="register.php" role="button">Daftar</a>
-                <?php else: ?>
-                    <!-- Jika user sudah login -->
-                    <a class="btn btn-md text-light me-2 px-3 mt-2" href="profile.php">
-                        Halo, <?= htmlspecialchars($_SESSION['username']) ?> <!-- Menampilkan nama pengguna -->
-                    </a>
-                    <a class="btn btn-sm btn-outline-danger rounded-pill me-2 px-3 mt-2" href="logout.php">Logout</a>
-                <?php endif; ?>
-            </div>
-        </div>
-    </nav>
+    <?php require 'includes/navbar.php'; ?>
 
     <!-- Header -->
     <header>
@@ -234,28 +199,8 @@
         </div>
     </section>
 
-   <!-- Footer -->
-    <footer class="py-4 text-center text-light">
-        <div class="container">
-            <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-3 mb-3">
-                <div>
-                    <i class="bi bi-instagram fs-5 text-danger me-2"></i> ekos.surabaya
-                </div>
-                <div>
-                    <i class="bi bi-facebook fs-5 text-primary me-2"></i> EkoSurabaya
-                </div>
-                <div>
-                    <i class="bi bi-twitter fs-5 text-info me-2"></i> ekosurabaya
-                </div>
-            </div>
-
-            <div class="text-light">
-                Surabaya, Jawa Timur, Indonesia | <i class="bi bi-telephone-fill me-1"></i> +62 823 4567 890
-            </div>
-
-            <p class="mt-3 text-secondary">&copy; 2025 eKos - Platform Pencarian Kos. All Rights Reserved.</p>
-        </div>
-    </footer>
+    <!-- Footer -->
+    <?php require 'includes/footer.php'; ?>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
