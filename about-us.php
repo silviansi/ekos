@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>eKos - Dashboard</title>
     <!-- Bootstrap CSS -->
@@ -17,11 +17,10 @@
     <?php require 'includes/navbar.php'; ?>
 
     <div class="container mt-5">
-        <h1 class="text-center text-light mb-5">Tentang Kami</h1>
 
         <div class="row">
             <div class="col-md-6">
-                <img src="assets/img/home-decor-1.jpg" class="img-fluid rounded" alt="Tentang eKos" />
+                <img src="assets/img/home-decor-2.jpg" class="img-fluid rounded" alt="Tentang eKos" />
             </div>
             <div class="col-md-6 text-light">
                 <h2 class="fw-bold">Siapa Kami?</h2>
@@ -30,7 +29,7 @@
         </div>
 
         <section class="mt-5">
-            <h2 class="text-light">Misi Kami</h2>
+            <h2 class="text-light mb-4">Misi Kami</h2>
             <div class="row">
                 <div class="col-md-4">
                     <div class="card shadow-sm border-light">
@@ -111,7 +110,7 @@
 
         <section class="mt-5 mb-5">
             <h2 class="text-light">Hubungi Kami</h2>
-            <p class="text-light">Punya pertanyaan, kritik, atau saran? Jangan ragu untuk menghubungi kami melalui <a href="kontak-kami.php" class="text-primary">halaman kontak</a> atau email ke <strong>support@ekos.id</strong>.</p>
+            <p class="text-light">Punya pertanyaan, kritik, atau saran? Jangan ragu untuk menghubungi kami melalui <a href="contact.php" class="text-primary">halaman kontak</a> atau email ke <strong>support@ekos.id</strong>.</p>
         </section>
     </div>
 
