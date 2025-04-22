@@ -8,6 +8,9 @@ if (session_status() === PHP_SESSION_NONE) {
     <div class="container">
         <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-3 mb-3">
             <div>
+                <i class="bi bi-envelope fs-5 text-danger me-2"></i> support@ekos.id
+            </div>
+            <div>
                 <i class="bi bi-instagram fs-5 text-danger me-2"></i> ekos.surabaya
             </div>
             <div>
