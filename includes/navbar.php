@@ -17,7 +17,7 @@ if (session_status() === PHP_SESSION_NONE) {
                     <a class="nav-link <?php echo (basename($_SERVER['PHP_SELF']) == 'index.php' ? 'active' : ''); ?>" href="index.php">Beranda</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link <?php echo (basename($_SERVER['PHP_SELF']) == 'search-kos' ? 'active' : ''); ?>" href="search-kos">Cari Kos</a>
+                    <a class="nav-link <?php echo (basename($_SERVER['PHP_SELF']) == 'search-kos.php' ? 'active' : ''); ?>" href="search-kos.php">Cari Kos</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link <?php echo (basename ($_SERVER['PHP_SELF']) == 'about-us.php' ? 'active' : ''); ?>" href="about-us.php">Tentang Kami</a>
