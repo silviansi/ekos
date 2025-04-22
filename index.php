@@ -40,7 +40,7 @@
                     <h2 class="text-light fw-bold">Kos Populer</h2>
                     <p class="text-light mb-0">Kami punya banyak pilihan kos yang cocok untukmu!</p>
                 </div>
-                <a href="#" class="btn btn-outline-light rounded-pill">Lihat Semua</a>
+                <a href="search-kos.php" class="btn btn-outline-light rounded-pill">Lihat Semua</a>
             </div>
             <div class="row">
             <!-- Kos Card Template -->
