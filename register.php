@@ -93,7 +93,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     </div>
                     <button class="btn-register border-0 rounded fw-bold" type="submit">Daftar</button>
                 </form>
-                <p class="text-light mt-3">Sudah punya akun? <a href="index.php" class="text-success text-decoration-none">Login</a></p>
+                <p class="text-light mt-3">Sudah punya akun? <a href="login.php" class="text-success text-decoration-none">Login</a></p>
             </div>
         </div>
     </main>
