@@ -4,7 +4,7 @@ if (session_status() === PHP_SESSION_NONE) {
 }
 ?>
 
-<nav class="navbar navbar-expand-lg navbar-dark">
+<nav id="navbar" class="navbar sticky-top navbar-expand-lg navbar-dark">
     <div class="container-fluid">
         <a class="navbar-brand fw-bold mx-3 brand-style" href="#">eKos</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
