@@ -6,7 +6,9 @@ if (session_status() === PHP_SESSION_NONE) {
 
 <nav id="navbar" class="navbar sticky-top navbar-expand-lg navbar-dark">
     <div class="container-fluid">
-        <a class="navbar-brand fw-bold mx-3 brand-style" href="#">eKos</a>
+        <a class="navbar-brand fw-bold mx-3 brand-style" href="index.php">
+            <img src="assets/img/logo-ekos.png" alt="Logo eKos" height="30">
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

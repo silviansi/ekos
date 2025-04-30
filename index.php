@@ -112,7 +112,7 @@
             <!-- Bagian Kiri (Deskripsi) -->
             <div class="col-md-4 mb-4 mb-md-0">
                 <p class="fasilitas-desc">Temukan berbagai fasilitas terbaik yang akan membuat pengalaman tinggalmu lebih nyaman dan menyenangkan. Dari koneksi Wi-Fi cepat hingga ruang kerja pribadi, semua tersedia untuk memenuhi kebutuhanmu!</p>
-                <a href="#" class="btn btn-cari">Cari Sekarang</a>
+                <a href="search-kos.php" class="btn btn-cari">Cari Sekarang</a>
             </div>
 
             <!-- Bagian Kanan (Fasilitas) -->
@@ -121,7 +121,7 @@
                     <div class="col-6 col-md-3">
                         <div class="card fasilitas-card text-center">
                             <i class="bi bi-wifi fs-1 fasilitas-icon"></i>
-                            <p class="mt-2 fasilitas-text">WiFi Gratis</p>
+                            <p class="mt-2 fasilitas-text">WiFi</p>
                         </div>
                     </div>
                     <div class="col-6 col-md-3">
@@ -145,7 +145,7 @@
                     <div class="col-6 col-md-3">
                         <div class="card fasilitas-card text-center">
                             <i class="bi bi-lightning fs-1 fasilitas-icon"></i>
-                            <p class="mt-2 fasilitas-text">Listrik Gratis</p>
+                            <p class="mt-2 fasilitas-text">Listrik</p>
                         </div>
                     </div>
                     <div class="col-6 col-md-3">
