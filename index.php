@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/img/logo.png">
     <title>eKos - Dashboard</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -172,16 +173,112 @@
     </div>
     </section>
 
+    <!-- Testimoni -->
+    <section id="testimoni" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold text-light">Apa Kata Mereka?</h2>
+            <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card p-3 h-100 shadow-sm border-0">
+                <p>"Platform eKos sangat membantu saya dalam menemukan kos yang nyaman dan strategis dekat kampus!"</p>
+                <div class="d-flex align-items-center mt-3">
+                    <img src="assets/img/user-1.png" alt="User" class="rounded-circle me-3" width="50">
+                    <div>
+                    <strong>Ayu P.</strong><br><small>Mahasiswa</small>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card p-3 h-100 shadow-sm border-0">
+                <p>"Sangat praktis dan informatif. Saya bisa lihat fasilitas lengkap dan langsung booking dari rumah!"</p>
+                <div class="d-flex align-items-center mt-3">
+                    <img src="assets/img/user-2.png" alt="User" class="rounded-circle me-3" width="50">
+                    <div>
+                    <strong>Rizky A.</strong><br><small>Karyawan</small>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card p-3 h-100 shadow-sm border-0">
+                <p>"Rekomendasi kos dari eKos benar-benar sesuai dengan kebutuhan saya. Top banget!"</p>
+                <div class="d-flex align-items-center mt-3">
+                    <img src="assets/img/user-3.png" alt="User" class="rounded-circle me-3" width="50">
+                    <div>
+                    <strong>Dina M.</strong><br><small>Freelancer</small>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cara Kerja eKos -->
+    <section id="proses" class="py-5">
+        <div class="container text-center text-light">
+            <h2 class="pb-5 fw-bold text-light">Cara Kerja eKos</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <i class="bi bi-search fs-1 text-primary"></i>
+                    <h5 class="mt-3">Cari Kos</h5>
+                    <p>Gunakan fitur pencarian untuk menemukan kos yang sesuai dengan lokasi dan kebutuhanmu.</p>
+                </div>
+                <div class="col-md-3">
+                    <i class="bi bi-info-circle fs-1 text-primary"></i>
+                    <h5 class="mt-3">Lihat Detail</h5>
+                    <p>Lihat informasi lengkap kos, seperti harga, fasilitas, dan ulasan.</p>
+                </div>
+                <div class="col-md-3">
+                    <i class="bi bi-bookmark-check fs-1 text-primary"></i>
+                    <h5 class="mt-3">Booking Online</h5>
+                    <p>Lakukan reservasi secara online tanpa perlu datang langsung ke lokasi.</p>
+                </div>
+                <div class="col-md-3">
+                    <i class="bi bi-house-check fs-1 text-primary"></i>
+                    <h5 class="mt-3">Tinggal Nyaman</h5>
+                    <p>Datang dan nikmati tempat tinggal barumu yang nyaman dan sesuai harapan!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partner Kami -->
+    <section id="partner" class="py-5">
+        <div class="container text-center text-light">
+            <h2 class="fw-bold mb-4">Dipercaya oleh Banyak Mitra</h2>
+            <p class="mb-5">eKos telah bekerja sama dengan berbagai pemilik kos dan institusi pendidikan di Indonesia.</p>
+            <div class="row justify-content-center">
+                <div class="col-4 col-md-2 mb-3"><img src="assets/img/partner-1.png" class="img-fluid w-50" alt="Partner 1"></div>
+                <div class="col-4 col-md-2 mb-3"><img src="assets/img/partner-2.png" class="img-fluid w-50" alt="Partner 2"></div>
+                <div class="col-4 col-md-2 mb-3"><img src="assets/img/partner-3.png" class="img-fluid w-50" alt="Partner 3"></div>
+                <div class="col-4 col-md-2 mb-3"><img src="assets/img/partner-4.png" class="img-fluid w-50" alt="Partner 4"></div>
+                <div class="col-4 col-md-2 mb-3"><img src="assets/img/partner-5.png" class="img-fluid w-50" alt="Partner 5"></div>
+                <div class="col-4 col-md-2 mb-3"><img src="assets/img/partner-6.png" class="img-fluid w-50" alt="Partner 6"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-5 text-center text-white">
+        <div class="container">
+            <h2 class="fw-bold mb-3">Siap menemukan kos impianmu?</h2>
+            <p class="mb-4">Bergabung sekarang dan rasakan kemudahan mencari kos terbaik bersama eKos!</p>
+            <a href="register.php" class="btn btn-cari">Daftar Sekarang</a>
+        </div>
+    </section>
+
     <!-- Tentang Kami -->
     <section id="about" class="about-section py-5">
         <div class="container">
             <div class="row align-items-center g-5">
                 <!-- Gambar -->
-                 <div class="col-lg-6">
-                    <div class="about-img-wrapper">
-                        <img src="assets/img/about.jpg" class="about-img" alt="About Image">
+                    <div class="col-lg-6">
+                        <div class="about-img-wrapper">
+                            <img src="assets/img/about.jpg" class="about-img" alt="About Image">
+                        </div>
                     </div>
-                 </div>
 
                 <!-- Konten -->
                 <div class="col-lg-6 text-light">
