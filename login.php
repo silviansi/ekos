@@ -62,7 +62,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
     <main class="main-login d-flex justify-content-center align-items-center">
         <div class="left-login d-flex justify-content-center align-items-center">
-        <h1>Selamat Datang<br>di Sistem eKos</h1>
+        <h1 class="fw-bold">SEAMAT DATANG<br>DI SISTEM eKOS</h1>
         </div>
 
         <div class="right-login d-flex justify-content-center align-items-center">
