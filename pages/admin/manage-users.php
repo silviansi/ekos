@@ -13,7 +13,7 @@
 <meta name="author" content="CodedThemes">
 
 <!-- [Favicon] icon -->
-<link rel="icon" href="../../assets/images/favicon.svg" type="image/x-icon"> 
+<link rel="icon" href="../../assets/img/logo.png" type="image/x-icon"> 
 <!-- [Google Font] Family -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap" id="main-font-link">
 <!-- [Tabler Icons] https://tablericons.com -->
@@ -29,8 +29,8 @@
 <link rel="stylesheet" href="../../assets/css/style-preset.css" >
 
 </head>
-<body data-pc-preset="preset-1" data-pc-direction="ltr" data-pc-theme="light">
-  <!-- [ Pre-loader ] start -->
+<body>
+<!-- [ Pre-loader ] start -->
 <div class="loader-bg">
   <div class="loader-track">
     <div class="loader-fill"></div>
@@ -44,169 +44,142 @@
 <?php require '../../includes/header.php'; ?>
 <!-- [ Header ] end -->
 
+<!-- [ Main Content ] start -->
+<div class="pc-container">
+  <div class="pc-content">
+    <!-- [ breadcrumb ] start -->
+    <div class="page-header">
+      <div class="page-block">
+        <div class="row align-items-center">
+          <div class="col-md-12">
+            <div class="page-header-title">
+              <h5 class="m-b-10">Kelola Pengguna</h5>
+            </div>
+            <ul class="breadcrumb">
+              <li class="breadcrumb-item"><a href="/ekos/dashboard.php">Beranda</a></li>
+              <li class="breadcrumb-item"><a href="javascript: void(0)">Manajemen Pengguna</a></li>
+              <li class="breadcrumb-item" aria-current="page">Kelola Pengguna</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- [ breadcrumb ] end -->
 
-
-  <!-- [ Main Content ] start -->
-  <div class="pc-container">
-    <div class="pc-content">
-      <!-- [ breadcrumb ] start -->
-      <div class="page-header">
-        <div class="page-block">
-          <div class="row align-items-center">
-            <div class="col-md-12">
-              <div class="page-header-title">
-                <h5 class="m-b-10">Kelola Pengguna</h5>
+    <!-- [ Main Content ] start -->
+    <div class="row">
+      <!-- [ sample-page ] start -->
+      <div class="col-sm-12">
+        <div class="card">
+          <div class="col-md-12">
+            <div class="card table-card latest-activity-card">
+              <div class="card-header d-flex align-items-center justify-content-between">
+                <h5>Latest Order</h5>
+                <a href="#" class="link-primary">View all</a>
               </div>
-              <ul class="breadcrumb">
-                <li class="breadcrumb-item"><a href="/ekos/dashboard.php">Beranda</a></li>
-                <li class="breadcrumb-item"><a href="javascript: void(0)">Manajemen Pengguna</a></li>
-                <li class="breadcrumb-item" aria-current="page">Kelola Pengguna</li>
-              </ul>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table table-hover table-borderless">
+                    <thead>
+                      <tr>
+                        <th>Customer</th>
+                        <th>Order ID</th>
+                        <th>Photo</th>
+                        <th>Product</th>
+                        <th>Quantity</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>John Deo</td>
+                        <td>#81412314</td>
+                        <td><img src="../assets/images/widget/PHONE1.jpg" alt="" class="img-fluid"></td>
+                        <td>Moto G5</td>
+                        <td>10</td>
+                        <td>17-2-2017</td>
+                        <td><label class="badge bg-light-warning">Pending</label></td>
+                        <td
+                          ><a href="#!"><i class="icon feather icon-edit f-w-600 f-16 m-r-15 text-success"></i></a
+                          ><a href="#!"><i class="feather icon-trash-2 f-w-600 f-16 text-danger"></i></a
+                        ></td>
+                      </tr>
+                      <tr>
+                        <td>Jenny William</td>
+                        <td>#68457898</td>
+                        <td><img src="../assets/images/widget/PHONE2.jpg" alt="" class="img-fluid"></td>
+                        <td>iPhone 8</td>
+                        <td>16</td>
+                        <td>20-2-2017</td>
+                        <td><label class="badge bg-light-primary">Paid</label></td>
+                        <td
+                          ><a href="#!"><i class="icon feather icon-edit f-w-600 f-16 m-r-15 text-success"></i></a
+                          ><a href="#!"><i class="feather icon-trash-2 f-w-600 f-16 text-danger"></i></a
+                        ></td>
+                      </tr>
+                      <tr>
+                        <td>Lori Moore</td>
+                        <td>#45457898</td>
+                        <td><img src="../assets/images/widget/PHONE3.jpg" alt="" class="img-fluid"></td>
+                        <td>Redmi 4</td>
+                        <td>20</td>
+                        <td>17-2-2017</td>
+                        <td><label class="badge bg-light-success">Success</label></td>
+                        <td
+                          ><a href="#!"><i class="icon feather icon-edit f-w-600 f-16 m-r-15 text-success"></i></a
+                          ><a href="#!"><i class="feather icon-trash-2 f-w-600 f-16 text-danger"></i></a
+                        ></td>
+                      </tr>
+                      <tr>
+                        <td>Austin Pena</td>
+                        <td>#62446232</td>
+                        <td><img src="../assets/images/widget/PHONE4.jpg" alt="" class="img-fluid"></td>
+                        <td>Jio</td>
+                        <td>15</td>
+                        <td>25-4-2017</td>
+                        <td><label class="badge bg-light-danger">Failed</label></td>
+                        <td
+                          ><a href="#!"><i class="icon feather icon-edit f-w-600 f-16 m-r-15 text-success"></i></a
+                          ><a href="#!"><i class="feather icon-trash-2 f-w-600 f-16 text-danger"></i></a
+                        ></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="text-end m-r-20">
+                  <a href="#!" class="b-b-primary text-primary">View all Orders</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- [ breadcrumb ] end -->
-
-      <!-- [ Main Content ] start -->
-      <div class="row">
-        <!-- [ sample-page ] start -->
-        <div class="col-sm-12">
-          <div class="card">
-            <div class="card-body">
-                <div class="col-md-12">
-                <h5 class="mb-3">Recent Orders</h5>
-                <div class="card tbl-card">
-                    <div class="card-body">
-                    <div class="table-responsive">
-                        <table class="table table-hover table-borderless mb-0">
-                        <thead>
-                            <tr>
-                            <th>TRACKING NO.</th>
-                            <th>PRODUCT NAME</th>
-                            <th>TOTAL ORDER</th>
-                            <th>STATUS</th>
-                            <th class="text-end">TOTAL AMOUNT</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                            <td><a href="#" class="text-muted">84564564</a></td>
-                            <td>Camera Lens</td>
-                            <td>40</td>
-                            <td><span class="d-flex align-items-center gap-2"><i
-                                    class="fas fa-circle text-danger f-10 m-r-5"></i>Rejected</span>
-                            </td>
-                            <td class="text-end">$40,570</td>
-                            </tr>
-                            <tr>
-                            <td><a href="#" class="text-muted">84564564</a></td>
-                            <td>Laptop</td>
-                            <td>300</td>
-                            <td><span class="d-flex align-items-center gap-2"><i
-                                    class="fas fa-circle text-warning f-10 m-r-5"></i>Pending</span>
-                            </td>
-                            <td class="text-end">$180,139</td>
-                            </tr>
-                            <tr>
-                            <td><a href="#" class="text-muted">84564564</a></td>
-                            <td>Mobile</td>
-                            <td>355</td>
-                            <td><span class="d-flex align-items-center gap-2"><i
-                                    class="fas fa-circle text-success f-10 m-r-5"></i>Approved</span></td>
-                            <td class="text-end">$180,139</td>
-                            </tr>
-                            <tr>
-                            <td><a href="#" class="text-muted">84564564</a></td>
-                            <td>Camera Lens</td>
-                            <td>40</td>
-                            <td><span class="d-flex align-items-center gap-2"><i
-                                    class="fas fa-circle text-danger f-10 m-r-5"></i>Rejected</span>
-                            </td>
-                            <td class="text-end">$40,570</td>
-                            </tr>
-                            <tr>
-                            <td><a href="#" class="text-muted">84564564</a></td>
-                            <td>Laptop</td>
-                            <td>300</td>
-                            <td><span class="d-flex align-items-center gap-2"><i
-                                    class="fas fa-circle text-warning f-10 m-r-5"></i>Pending</span>
-                            </td>
-                            <td class="text-end">$180,139</td>
-                            </tr>
-                            <tr>
-                            <td><a href="#" class="text-muted">84564564</a></td>
-                            <td>Mobile</td>
-                            <td>355</td>
-                            <td><span class="d-flex align-items-center gap-2"><i
-                                    class="fas fa-circle text-success f-10 m-r-5"></i>Approved</span></td>
-                            <td class="text-end">$180,139</td>
-                            </tr>
-                            <tr>
-                            <td><a href="#" class="text-muted">84564564</a></td>
-                            <td>Camera Lens</td>
-                            <td>40</td>
-                            <td><span class="d-flex align-items-center gap-2"><i
-                                    class="fas fa-circle text-danger f-10 m-r-5"></i>Rejected</span>
-                            </td>
-                            <td class="text-end">$40,570</td>
-                            </tr>
-                            <tr>
-                            <td><a href="#" class="text-muted">84564564</a></td>
-                            <td>Laptop</td>
-                            <td>300</td>
-                            <td><span class="d-flex align-items-center gap-2"><i
-                                    class="fas fa-circle text-warning f-10 m-r-5"></i>Pending</span>
-                            </td>
-                            <td class="text-end">$180,139</td>
-                            </tr>
-                            <tr>
-                            <td><a href="#" class="text-muted">84564564</a></td>
-                            <td>Mobile</td>
-                            <td>355</td>
-                            <td><span class="d-flex align-items-center gap-2"><i
-                                    class="fas fa-circle text-success f-10 m-r-5"></i>Approved</span></td>
-                            <td class="text-end">$180,139</td>
-                            </tr>
-                            <tr>
-                            <td><a href="#" class="text-muted">84564564</a></td>
-                            <td>Mobile</td>
-                            <td>355</td>
-                            <td><span class="d-flex align-items-center gap-2"><i
-                                    class="fas fa-circle text-success f-10 m-r-5"></i>Approved</span></td>
-                            <td class="text-end">$180,139</td>
-                            </tr>
-                        </tbody>
-                        </table>
-                    </div>
-                    </div>
-                </div>
-                </div>
-            </div>
-          </div>
-        </div>
-        <!-- [ sample-page ] end -->
+      <!-- [ sample-page ] end -->
+    </div>
+    <!-- [ Main Content ] end -->
+  </div>
+</div>
+<!-- [ Main Content ] end -->
+<footer class="pc-footer">
+  <div class="footer-wrapper container-fluid">
+    <div class="row">
+      <div class="col-sm my-1">
+        <p class="m-0"
+          >Mantis &#9829; crafted by Team <a href="https://themeforest.net/user/codedthemes" target="_blank">Codedthemes</a> Distributed by <a href="https://themewagon.com/">ThemeWagon</a>.</p
+        >
       </div>
-      <!-- [ Main Content ] end -->
+      <div class="col-auto my-1">
+        <ul class="list-inline footer-link mb-0">
+          <li class="list-inline-item"><a href="/ekos/dashboard.php">Beranda</a></li>
+        </ul>
+      </div>
     </div>
   </div>
-  <!-- [ Main Content ] end -->
-  <footer class="pc-footer">
-    <div class="footer-wrapper container-fluid">
-      <div class="row">
-        <div class="col-sm my-1">
-          <p class="m-0"
-            >Mantis &#9829; crafted by Team <a href="https://themeforest.net/user/codedthemes" target="_blank">Codedthemes</a> Distributed by <a href="https://themewagon.com/">ThemeWagon</a>.</p
-          >
-        </div>
-        <div class="col-auto my-1">
-          <ul class="list-inline footer-link mb-0">
-            <li class="list-inline-item"><a href="../index.html">Home</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </footer> <!-- Required Js -->
+</footer> 
+  
+<!-- Required Js -->
 <script src="../../assets/js/plugins/popper.min.js"></script>
 <script src="../../assets/js/plugins/simplebar.min.js"></script>
 <script src="../../assets/js/plugins/bootstrap.min.js"></script>
