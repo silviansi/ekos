@@ -1,8 +1,9 @@
+<?php if (session_status() == PHP_SESSION_NONE) session_start(); ?>
+
 <nav class="pc-sidebar">
   <div class="navbar-wrapper">
     <div class="m-header">
       <a href="/ekos/dashboard.php" class="b-brand text-primary">
-        <!-- ========   Change your logo from here   ============ -->
         <img src="/ekos/assets/img/logo-ekos.png" class="img-fluid w-50" alt="logo">
       </a>
     </div>
@@ -15,6 +16,8 @@
           </a>
         </li>
 
+        <!-- Menu Admin -->
+        <?php if ($_SESSION['role_id'] == 1): ?>
         <li class="pc-item pc-caption">
           <label>Manajemen Pengguna</label>
           <i class="ti ti-dashboard"></i>
@@ -55,13 +58,13 @@
           </a>
         </li>
         <li class="pc-item">
-          <a href="elements/icon-tabler.html" class="pc-link">
+          <a href="" class="pc-link">
             <span class="pc-micon"><i class="ti ti-archive"></i></span>
             <span class="pc-mtext">Kategori Kos</span>
           </a>
         </li>
         <li class="pc-item">
-          <a href="elements/icon-tabler.html" class="pc-link">
+          <a href="" class="pc-link">
             <span class="pc-micon"><i class="ti ti-tool"></i></span>
             <span class="pc-mtext">Fasilitas Kos</span>
           </a>
@@ -77,6 +80,29 @@
             <span class="pc-mtext">Pesan Masuk</span>
           </a>
         </li>
+        <?php endif; ?>
+
+        <!-- Menu Pemilik Kos -->
+        <?php if ($_SESSION['role_id'] == 2): ?>
+        <li class="pc-item">
+          <a href="" class="pc-link">
+            <span class="pc-micon"><i class="ti ti-home"></i></span>
+            <span class="pc-mtext">Profil Kos Saya</span>
+          </a>
+        </li>
+        <li class="pc-item">
+          <a href="" class="pc-link">
+            <span class="pc-micon"><i class="ti ti-bed"></i></span>
+            <span class="pc-mtext">Kelola Kamar</span>
+          </a>
+        </li>
+        <li class="pc-item">
+          <a href="" class="pc-link">
+            <span class="pc-micon"><i class="ti ti-users"></i></span>
+            <span class="pc-mtext">Data Penyewa Saya</span>
+          </a>
+        </li>
+        <?php endif; ?>
 
       </ul>
     </div>
