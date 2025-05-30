@@ -64,6 +64,13 @@ if (!$facility) {
 </head>
 
 <body>
+    <!-- Pre-loader -->
+    <div class="loader-bg">
+        <div class="loader-track">
+            <div class="loader-fill"></div>
+        </div>
+    </div>
+    
     <!-- Sidebar Menu -->
     <?php require '../../includes/sidebar.php'; ?>
 
