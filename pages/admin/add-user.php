@@ -1,9 +1,18 @@
 <?php
+session_start();
 require '../../config/database.php';
 
+// Cek apakah pengguna sudah login dan apakah dia admin
+if (!isset($_SESSION['user_id']) || $_SESSION['role_id'] != 1) {
+    header("Location: /ekos/login.php"); 
+    exit();
+}
+
+// Inisialisasi variabel untuk error dan success
 $errors = [];
 $susccess = false;
 
+// Proses tambah pengguna baru
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'] ?? '';
     $name = $_POST['name'] ?? '';
@@ -39,12 +48,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $stmt->bindParam(':password', $hashed_password);
                 $stmt->execute();
                 
-                // Redirect atau set success message
                 header("Location: /ekos/pages/admin/manage-users.php?success=add");
                 exit();
             }
         } catch (PDOException $e) {
-            // Tangani error database
             $errors[] = 'Terjadi kesalahan: ' . htmlspecialchars($e->getMessage());
         }
     }

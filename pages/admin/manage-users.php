@@ -1,5 +1,13 @@
 <?php
+session_start();
+
 require '../../config/database.php';
+
+// Cek apakah pengguna sudah login dan apakah dia admin
+if (!isset($_SESSION['user_id']) || $_SESSION['role_id'] != 1) {
+    header("Location: /ekos/login.php"); 
+    exit();
+}
 
 // Query ambil semua user
 $stmt = $conn->query("SELECT users.user_id, users.username, users.name, users.email, users.phone_number, roles.role_name FROM users JOIN roles ON users.role_id = roles.roles_id");

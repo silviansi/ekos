@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Verifikasi password menggunakan password_verify
         if ($user && password_verify($password, $user['password'])) {
             // Menyimpan informasi pengguna ke session
-            $_SESSION['user_id'] = $user['id'];
+            $_SESSION['user_id'] = $user['user_id'];
             $_SESSION['email'] = $user['email'];
             $_SESSION['role_id'] = $user['role_id'];
             $_SESSION['username'] = $user['username']; 

@@ -1,7 +1,15 @@
 <?php 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    require '../../config/database.php';
+session_start();
+require '../../config/database.php';
 
+// Cek apakah pengguna sudah login dan apakah dia admin
+if (!isset($_SESSION['user_id']) || $_SESSION['role_id'] != 1) {
+    header("Location: /ekos/login.php"); 
+    exit();
+}
+
+// Proses tambah fasilitas
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $facility_name = $_POST['facility_name'];
 
     try {
@@ -49,6 +57,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
 
 <body>
+    <!-- Pre-loader -->
+    <div class="loader-bg">
+        <div class="loader-track">
+            <div class="loader-fill"></div>
+        </div>
+    </div>
+    
     <!-- Sidebar Menu -->
     <?php require '../../includes/sidebar.php'; ?>
 

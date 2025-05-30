@@ -1,3 +1,14 @@
+<?php 
+session_start();
+require '../../config/database.php';
+
+// Cek apakah pengguna sudah login dan apakah dia admin
+if (!isset($_SESSION['user_id']) || $_SESSION['role_id'] != 1) {
+    header("Location: /ekos/login.php"); 
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,7 +41,7 @@
 <!-- [Body] Start -->
 
 <body>
-  <!-- [ Pre-loader ] start -->
+<!-- [ Pre-loader ] start -->
 <div class="loader-bg">
   <div class="loader-track">
     <div class="loader-fill"></div>
