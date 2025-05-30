@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         ':category_id' => $category_id
     ]);
 
-    header("Location: /ekos/pages/admin/category-kost.php?success=update");
+    header("Location: /ekos/pages/admin/category-kost.php?success=edit");
     exit();
 }
 

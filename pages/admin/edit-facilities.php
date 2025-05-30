@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         ':facility_id' => $facility_id
     ]);
 
-    header("Location: /ekos/pages/admin/facility-kost.php?success=update");
+    header("Location: /ekos/pages/admin/facility-kost.php?success=edit");
     exit();
 }
 
