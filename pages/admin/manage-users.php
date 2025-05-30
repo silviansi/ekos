@@ -1,9 +1,8 @@
 <?php
-if (session_status() == PHP_SESSION_NONE) session_start();
 require '../../config/database.php';
 
 // Query ambil semua user
-$stmt = $conn->query("SELECT users.user_id, users.username, users.email, users.phone_number, roles.role_name FROM users JOIN roles ON users.role_id = roles.roles_id");
+$stmt = $conn->query("SELECT users.user_id, users.username, users.name, users.email, users.phone_number, roles.role_name FROM users JOIN roles ON users.role_id = roles.roles_id");
 
 // Ambil semua data
 $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -77,6 +76,38 @@ $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
       <div class="row">
         <!-- Manage Users -->
         <div class="col-sm-12">
+          <?php if (isset($_GET['success']) && $_GET['success'] == 'delete'): ?>
+              <div class="alert alert-success alert-dismissible fade show" role="alert">
+                  Pengguna berhasil dihapus.
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+          <?php elseif (isset($_GET['error']) && $_GET['error'] == 'delete'): ?>
+              <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                  Gagal menghapus pengguna.
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+          <?php elseif (isset($_GET['success']) && $_GET['success'] == 'add'): ?>
+              <div class="alert alert-success alert-dismissible fade show" role="alert">
+                  Pengguna berhasil ditambahkan.
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+          <?php elseif (isset($_GET['success']) && $_GET['success'] == 'edit'): ?>
+              <div class="alert alert-success alert-dismissible fade show" role="alert">
+                  Pengguna berhasil diubah.
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+          <?php elseif (isset($_GET['error']) && $_GET['error'] == 'invalid'): ?>
+              <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                  ID pengguna tidak valid.
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+          <?php elseif (isset($_GET['error']) && !empty($_GET['error']) && $_GET['error'] != 'delete' && $_GET['error'] != 'invalid'): ?>
+              <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                  <?= htmlspecialchars(urldecode($_GET['error'])) ?>
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+          <?php endif; ?>
+
           <div class="card">
             <div class="col-md-12">
               <div class="card table-card latest-activity-card">
@@ -89,7 +120,8 @@ $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     <table class="table table-hover table-borderless">
                       <thead>
                         <tr>
-                          <th>No</th>
+                          <th>No.</th>
+                          <th>Nama</th>
                           <th>Email</th>
                           <th>Username</th>
                           <th>No. Tlp</th>
@@ -101,15 +133,16 @@ $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <?php $no = 1; foreach ($users as $user): ?>
                           <tr>
                             <td><?= $no++ ?></td>
+                            <td><?= htmlspecialchars($user['name']) ?></td>
                             <td><?= htmlspecialchars($user['email']) ?></td>
                             <td><?= htmlspecialchars($user['username']) ?></td>
                             <td><?= htmlspecialchars($user['phone_number']) ?></td>
                             <td><?= htmlspecialchars($user['role_name']) ?></td>
                             <td>
-                              <a href="edit-user.php?id=<?= htmlspecialchars($user['id'] ?? '') ?>">
+                              <a href="edit-user.php?id=<?= htmlspecialchars($user['user_id'] ?? '') ?>">
                                 <i class="icon feather icon-edit text-success me-2"></i>
                               </a>
-                              <a href="hapus-user.php?id=<?= htmlspecialchars($user['id'] ?? '') ?>" onclick='return confirm("Yakin ingin menghapus?")'>
+                              <a href="delete-user.php?id=<?= htmlspecialchars($user['user_id'] ?? '') ?>" onclick='return confirm("Yakin ingin menghapus?")'>
                                 <i class="feather icon-trash-2 text-danger"></i>
                               </a>
                             </td>

@@ -76,21 +76,34 @@ $facility = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <!-- Main Content -->
             <div class="row">
                 <div class="col-sm-12">
-                    <?php if (isset($_GET['success']) && $_GET['success'] === 'add'): ?>
+                    <?php if (isset($_GET['success']) && $_GET['success'] == 'delete'): ?>
                         <div class="alert alert-success alert-dismissible fade show" role="alert">
-                            Fasilitas berhasil ditambahkan!
+                            Fasilitas berhasil dihapus.
                             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                         </div>
-                    <?php elseif (isset($_GET['success']) && $_GET['success'] === 'update'): ?>
-                        <div class="alert alert-success alert-dismissible fade show" role="alert">
-                            Fasilitas berhasil diperbarui.
-                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                        </div>
-                    <?php endif; ?>
-
-                    <?php if (isset($_GET['error'])): ?>
+                    <?php elseif (isset($_GET['error']) && $_GET['error'] == 'delete'): ?>
                         <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                            Gagal menambahkan fasilitas: <?= htmlspecialchars(urldecode($_GET['error'])) ?>
+                            Gagal menghapus fasilitas.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    <?php elseif (isset($_GET['success']) && $_GET['success'] == 'add'): ?>
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            Fasilitas berhasil ditambahkan.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    <?php elseif (isset($_GET['success']) && $_GET['success'] == 'edit'): ?>
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            Fasilitas berhasil diubah.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    <?php elseif (isset($_GET['error']) && $_GET['error'] == 'invalid'): ?>
+                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                            ID fasilitas tidak valid.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    <?php elseif (isset($_GET['error']) && !empty($_GET['error']) && $_GET['error'] != 'delete' && $_GET['error'] != 'invalid'): ?>
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <?= htmlspecialchars(urldecode($_GET['error'])) ?>
                             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                         </div>
                     <?php endif; ?>
@@ -120,7 +133,7 @@ $facility = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                                     <a href="edit-facilities.php?id=<?= htmlspecialchars($facilities['facility_id'] ?? '') ?>">
                                                         <i class="icon feather icon-edit text-success me-2"></i>
                                                     </a>
-                                                    <a href="hapus-facilities.php?id=<?= htmlspecialchars($facilities['facility_id'] ?? '') ?>" onclick='return confirm("Yakin ingin menghapus?")'>
+                                                    <a href="delete-facilities.php?id=<?= htmlspecialchars($facilities['facility_id'] ?? '') ?>" onclick='return confirm("Yakin ingin menghapus?")'>
                                                         <i class="feather icon-trash-2 text-danger"></i>
                                                     </a>
                                                 </td>

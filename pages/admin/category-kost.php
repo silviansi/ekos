@@ -1,5 +1,4 @@
 <?php
-if (session_status() == PHP_SESSION_NONE) session_start();
 require '../../config/database.php';
 
 // Query ambil semua kategori kos
@@ -76,21 +75,34 @@ $categories = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <!-- Main Content -->
         <div class="row">
             <div class="col-sm-12">
-                <?php if (isset($_GET['success']) && $_GET['success'] === 'add'): ?>
+                <?php if (isset($_GET['success']) && $_GET['success'] == 'delete'): ?>
                     <div class="alert alert-success alert-dismissible fade show" role="alert">
-                        Kategori berhasil ditambahkan!
+                        Kategori berhasil dihapus.
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
-                <?php elseif (isset($_GET['success']) && $_GET['success'] === 'update'): ?>
-                    <div class="alert alert-success alert-dismissible fade show" role="alert">
-                        Kategori berhasil diperbarui.
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                <?php endif; ?>
-
-                <?php if (isset($_GET['error'])): ?>
+                <?php elseif (isset($_GET['error']) && $_GET['error'] == 'delete'): ?>
                     <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                        Gagal menambahkan kategori: <?= htmlspecialchars(urldecode($_GET['error'])) ?>
+                        Gagal menghapus kategori.
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                <?php elseif (isset($_GET['success']) && $_GET['success'] == 'add'): ?>
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        Kategori berhasil ditambahkan.
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                <?php elseif (isset($_GET['success']) && $_GET['success'] == 'edit'): ?>
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        Kategori berhasil diubah.
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                <?php elseif (isset($_GET['error']) && $_GET['error'] == 'invalid'): ?>
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        ID kategori tidak valid.
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                <?php elseif (isset($_GET['error']) && !empty($_GET['error']) && $_GET['error'] != 'delete' && $_GET['error'] != 'invalid'): ?>
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <?= htmlspecialchars(urldecode($_GET['error'])) ?>
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
                 <?php endif; ?>
@@ -121,7 +133,7 @@ $categories = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                                     <a href="edit-category.php?id=<?= htmlspecialchars($category['category_id'] ?? '') ?>">
                                                         <i class="icon feather icon-edit text-success me-2"></i>
                                                     </a>
-                                                    <a href="hapus-category.php?id=<?= htmlspecialchars($category['category_id'] ?? '') ?>" onclick='return confirm("Yakin ingin menghapus?")'>
+                                                    <a href="delete-category.php?id=<?= htmlspecialchars($category['category_id'] ?? '') ?>" onclick='return confirm("Yakin ingin menghapus?")'>
                                                         <i class="feather icon-trash-2 text-danger"></i>
                                                     </a>
                                                 </td>
