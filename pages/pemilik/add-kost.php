@@ -151,25 +151,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="stylesheet" href="../../assets/css/style.css" id="main-style-link" >
     <link rel="stylesheet" href="../../assets/css/style-preset.css" >
 
-    <style>
-    .select2-container .select2-selection--multiple {
-        min-height: 45px;
-        padding: 6px 8px;
-        border: 1px solid #ced4da;
-        border-radius: 4px;
-        font-size: 14px;
-    }
-
-    .select2-container--default .select2-selection--multiple .select2-selection__rendered {
-        line-height: 24px;
-    }
-    .select2-container--default .select2-selection--multiple .select2-selection__choice {
-        margin-top: 4px;
-        padding: 2px 8px;
-        font-size: 13px;
-    }
-    </style>
-
 </head>
 
 <body>
@@ -199,7 +180,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         </div>
                         <ul class="breadcrumb">
                             <li class="breadcrumb-item"><a href="javascript: void(0)">Manajemen Kos</a></li>
-                            <li class="breadcrumb-item"><a href="/ekos/pages/pemilik/profile-kost.php">Profile Kos Saya</a></li>
+                            <li class="breadcrumb-item"><a href="/ekos/pages/pemilik/manage-kost.php">Kos Saya</a></li>
                             <li class="breadcrumb-item" aria-current="page">Tambah Kos</li>
                         </ul>
                     </div>
@@ -210,6 +191,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <!-- Main Content -->
         <div class="row">
             <div class="col-md-12">
+                <?php if (isset($error)): ?>
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <?= $error ?>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                <?php endif; ?>
                 <div class="card">
                     <div class="card-header">
                         <h5>Tambah Kost</h5>
@@ -311,7 +298,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
     </footer> 
 
-    <!-- jQuery (wajib untuk Select2) -->
+    <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     
     <!-- Select2 JS -->
