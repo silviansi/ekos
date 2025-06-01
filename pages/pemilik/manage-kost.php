@@ -155,8 +155,12 @@ $kosList = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                                 <?php endif; ?>
                                             </td>
                                             <td>
-                                                <a href="edit-kos.php?id=<?= $kos['kost_id'] ?>"><i class="icon feather icon-edit text-success"></i></a>
-                                                <a href="delete-kos.php?id=<?= $kos['kost_id'] ?>" onclick="return confirm('Yakin ingin menghapus data kos ini?')"><i class="feather icon-trash-2 text-danger"></i></a>
+                                                <a href="edit-kost.php?id=<?= htmlspecialchars($kos['kost_id'] ?? '') ?>">
+                                                    <i class="icon feather icon-edit text-success me-2"></i>
+                                                </a>
+                                                <a href="delete-kost.php?id=<?= htmlspecialchars($kos['kost_id'] ?? '') ?>" onclick='return confirm("Yakin ingin menghapus?")'>
+                                                    <i class="feather icon-trash-2 text-danger"></i>
+                                                </a>
                                             </td>
                                         </tr>
                                         <?php endforeach; ?>
