@@ -139,9 +139,12 @@ $facility = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                                     <a href="edit-facilities.php?id=<?= htmlspecialchars($facilities['facility_id'] ?? '') ?>">
                                                         <i class="icon feather icon-edit text-success me-2"></i>
                                                     </a>
-                                                    <a href="delete-facilities.php?id=<?= htmlspecialchars($facilities['facility_id'] ?? '') ?>" onclick='return confirm("Yakin ingin menghapus?")'>
-                                                        <i class="feather icon-trash-2 text-danger"></i>
-                                                    </a>
+                                                    <form action="delete-facilities.php" method="POST" style="display:inline;" onsubmit="return confirm('Yakin ingin menghapus?')">
+                                                        <input type="hidden" name="facility_id" value="<?= htmlspecialchars($facilities['facility_id'] ?? '') ?>">
+                                                        <button type="submit" style="border:none; background:none; padding:0; margin:0; cursor:pointer;">
+                                                            <i class="feather icon-trash-2 text-danger"></i>
+                                                        </button>
+                                                    </form>
                                                 </td>
                                             </tr>
                                             <?php endforeach; ?>

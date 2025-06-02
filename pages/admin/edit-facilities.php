@@ -4,30 +4,39 @@ require '../../config/database.php';
 
 // Cek apakah pengguna sudah login dan apakah dia admin
 if (!isset($_SESSION['user_id']) || $_SESSION['role_id'] != 1) {
-    header("Location: /ekos/login.php"); 
+    header("Location: /ekos/login.php");
     exit();
 }
 
-// Ambil ID fasilitas dari URL
-if (!isset($_GET['id'])) {
+// Ambil ID kategori dari URL
+if (!isset($_GET['id']) || empty($_GET['id'])) {
     header("Location: /ekos/pages/admin/facility-kost.php");
     exit();
 }
 
 $facility_id = $_GET['id'];
 
-// Proses update fasilitas
+// Proses update kategori saat form dikirim
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $facility_name = $_POST['facility_name'];
+    // Cek CSRF token
+    if (!isset($_POST['csrf_token']) || $_POST['csrf_token'] !== $_SESSION['csrf_token']) {
+        die("Permintaan tidak valid (CSRF token mismatch).");
+    }
+    $facility_name = trim($_POST['facility_name']);
 
-    $stmt = $conn->prepare("UPDATE facilities SET facility_name = :facility_name WHERE facility_id = :facility_id");
-    $stmt->execute([
-        ':facility_name' => $facility_name,
-        ':facility_id' => $facility_id
-    ]);
+    // Validasi input
+    if (!empty($facility_name)) {
+        $stmt = $conn->prepare("UPDATE facilities SET facility_name = :facility_name WHERE facility_id = :facility_id");
+        $stmt->execute([
+            ':facility_name' => $facility_name,
+            ':facility_id' => $facility_id
+        ]);
 
-    header("Location: /ekos/pages/admin/facility-kost.php?success=edit");
-    exit();
+        header("Location: /ekos/pages/admin/facility-kost.php?success=edit");
+        exit();
+    } else {
+        $error = "Nama fasilitas tidak boleh kosong.";
+    }
 }
 
 // Ambil data fasilitas berdasarkan ID
@@ -35,6 +44,7 @@ $stmt = $conn->prepare("SELECT * FROM facilities WHERE facility_id = :facility_i
 $stmt->execute([':facility_id' => $facility_id]);
 $facility = $stmt->fetch(PDO::FETCH_ASSOC);
 
+// Jika data facilitas tidak ditemukan
 if (!$facility) {
     header("Location: /ekos/pages/admin/facility-kost.php");
     exit();
@@ -113,12 +123,23 @@ if (!$facility) {
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-12">
+                                <?php if (isset($error)): ?>
+                                    <div class="alert alert-danger"><?= htmlspecialchars($error) ?></div>
+                                <?php endif; ?>
+                                <?php
+                                if (empty($_SESSION['csrf_token'])) {
+                                    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+                                }
+                                $csrf_token = $_SESSION['csrf_token'];
+                                ?>
                                 <form method="POST">
-                                    <div class="form-group">
+                                    <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrf_token) ?>">
+                                    <div class="form-group mb-3">
                                         <label class="form-label">Fasilitas</label>
-                                        <input type="text" name="facility_name" class="form-control" value="<?= htmlspecialchars($facility['facility_name']) ?>">
+                                        <input type="text" name="facility_name" class="form-control" value="<?= htmlspecialchars($facility['facility_name']) ?>" required>
                                     </div>
-                                    <button type="submit" class="btn btn-primary mb-4">Submit</button>
+                                    <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+                                    <a href="/ekos/pages/admin/facility-kost.php" class="btn btn-secondary ms-2">Batal</a>
                                 </form>
                             </div>
                         </div>

@@ -4,30 +4,39 @@ require '../../config/database.php';
 
 // Cek apakah pengguna sudah login dan apakah dia admin
 if (!isset($_SESSION['user_id']) || $_SESSION['role_id'] != 1) {
-    header("Location: /ekos/login.php"); 
+    header("Location: /ekos/login.php");
     exit();
 }
 
 // Ambil ID kategori dari URL
-if (!isset($_GET['id'])) {
+if (!isset($_GET['id']) || empty($_GET['id'])) {
     header("Location: /ekos/pages/admin/category-kost.php");
     exit();
 }
 
 $category_id = $_GET['id'];
 
-// Proses update kategori
+// Proses update kategori saat form dikirim
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $category_name = $_POST['category_name'];
+    // Cek CSRF token
+    if (!isset($_POST['csrf_token']) || $_POST['csrf_token'] !== $_SESSION['csrf_token']) {
+        die("Permintaan tidak valid (CSRF token mismatch).");
+    }
+    $category_name = trim($_POST['category_name']);
 
-    $stmt = $conn->prepare("UPDATE category SET category_name = :category_name WHERE category_id = :category_id");
-    $stmt->execute([
-        ':category_name' => $category_name,
-        ':category_id' => $category_id
-    ]);
+    // Validasi input
+    if (!empty($category_name)) {
+        $stmt = $conn->prepare("UPDATE category SET category_name = :category_name WHERE category_id = :category_id");
+        $stmt->execute([
+            ':category_name' => $category_name,
+            ':category_id' => $category_id
+        ]);
 
-    header("Location: /ekos/pages/admin/category-kost.php?success=edit");
-    exit();
+        header("Location: /ekos/pages/admin/category-kost.php?success=edit");
+        exit();
+    } else {
+        $error = "Nama kategori tidak boleh kosong.";
+    }
 }
 
 // Ambil data kategori berdasarkan ID
@@ -35,6 +44,7 @@ $stmt = $conn->prepare("SELECT * FROM category WHERE category_id = :category_id"
 $stmt->execute([':category_id' => $category_id]);
 $category = $stmt->fetch(PDO::FETCH_ASSOC);
 
+// Jika data kategori tidak ditemukan
 if (!$category) {
     header("Location: /ekos/pages/admin/category-kost.php");
     exit();
@@ -113,12 +123,23 @@ if (!$category) {
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-12">
+                                <?php if (isset($error)): ?>
+                                    <div class="alert alert-danger"><?= htmlspecialchars($error) ?></div>
+                                <?php endif; ?>
+                                <?php
+                                if (empty($_SESSION['csrf_token'])) {
+                                    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+                                }
+                                $csrf_token = $_SESSION['csrf_token'];
+                                ?>
                                 <form method="POST">
-                                    <div class="form-group">
+                                    <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrf_token) ?>">
+                                    <div class="form-group mb-3">
                                         <label class="form-label">Nama Kategori</label>
-                                        <input type="text" name="category_name" class="form-control" value="<?= htmlspecialchars($category['category_name']) ?>">
+                                        <input type="text" name="category_name" class="form-control" value="<?= htmlspecialchars($category['category_name']) ?>" required>
                                     </div>
-                                    <button type="submit" class="btn btn-primary mb-4">Submit</button>
+                                    <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+                                    <a href="/ekos/pages/admin/category-kost.php" class="btn btn-secondary ms-2">Batal</a>
                                 </form>
                             </div>
                         </div>
