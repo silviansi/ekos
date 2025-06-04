@@ -19,7 +19,7 @@ $kosList = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <html lang="en">
 
 <head>
-    <title>eKos - Profile Kos Saya</title>
+    <title>eKos - Kos Saya</title>
     <!-- [Meta] -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
@@ -69,12 +69,12 @@ $kosList = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <div class="row align-items-center">
                     <div class="col-md-12">
                         <div class="page-header-title">
-                            <h5 class="m-b-10">Profile Kos Saya</h5>
+                            <h5 class="m-b-10">Kos Saya</h5>
                         </div>
                         <ul class="breadcrumb">
                             <li class="breadcrumb-item"><a href="/ekos/pages/pemilik/dashboard.php">Beranda</a></li>
                             <li class="breadcrumb-item"><a href="javascript: void(0)">Manajemen Kos</a></li>
-                            <li class="breadcrumb-item" aria-current="page">Profile Kos Saya</li>
+                            <li class="breadcrumb-item" aria-current="page">Kos Saya</li>
                         </ul>
                     </div>
                 </div>
@@ -124,7 +124,7 @@ $kosList = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     <div class="col-md-12">
                         <div class="card table-card latest-activity-card">
                             <div class="card-header d-flex align-items-center justify-content-between">
-                                <h5>Profile Kos Saya</h5>
+                                <h5>Kos Saya</h5>
                                 <a href="add-kost.php" class="btn btn-primary">+ Tambah Kos</a>
                             </div>
                             <div class="card-body">
